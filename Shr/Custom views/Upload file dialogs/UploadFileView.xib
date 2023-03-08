@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="UploadFileView" customModule="Shr" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="PSV-pO-r4v" id="InJ-oj-igy"/>
+                <outlet property="fileUploadingLabel" destination="zWK-dP-d30" id="u7V-eA-IOf"/>
+                <outlet property="fileUploadingSizeLabel" destination="2XB-XV-Bgm" id="c3x-2m-hbO"/>
+                <outlet property="uploadButton" destination="JC0-bD-dm6" id="QBQ-Pr-PTQ"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="460" height="223"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zWK-dP-d30">
+                    <rect key="frame" x="32" y="173" width="410" height="22"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="UPLOAD 'File name here.txt'" id="Axa-2r-jPO">
+                        <font key="font" size="18" name="BasisGrotesqueMonoPro-Medium"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-XV-Bgm">
+                    <rect key="frame" x="32" y="131" width="41" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="10 KB" id="plt-6y-BGv">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DYK-Z8-njU">
+                    <rect key="frame" x="32" y="117" width="59" height="12"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="FILE SIZE" id="aSs-Ta-TCH">
+                        <font key="font" size="10" name="BasisGrotesqueMonoPro-Regular"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Ge-K0-fbo">
+                    <rect key="frame" x="32" y="80" width="90" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Main Storage" id="7jd-x9-BJh">
+                        <font key="font" metaFont="system" size="14"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vkG-TD-LjG">
+                    <rect key="frame" x="32" y="66" width="101" height="12"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="STORAGE LOCATION" id="QK3-Aq-Ze9">
+                        <font key="font" size="10" name="BasisGrotesqueMonoPro-Regular"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="s7G-wm-UEp">
+                    <rect key="frame" x="141" y="67" width="40" height="10"/>
+                    <buttonCell key="cell" type="bevel" title="CHANGE" bezelStyle="rounded" alignment="center" enabled="NO" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="nck-D3-ZT5">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="8" name="SFPro-Regular"/>
+                    </buttonCell>
+                    <color key="contentTintColor" name="AccentColor"/>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JC0-bD-dm6">
+                    <rect key="frame" x="368" y="13" width="82" height="32"/>
+                    <buttonCell key="cell" type="push" title="Upload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="56M-AU-eGX">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name="BasisGrotesqueMonoPro-Regular"/>
+                    </buttonCell>
+                    <color key="bezelColor" name="AccentColor"/>
+                    <connections>
+                        <action selector="uploadButton:" target="-2" id="uT1-p4-dwf"/>
+                    </connections>
+                </button>
+                <button focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PSV-pO-r4v">
+                    <rect key="frame" x="308" y="22" width="52" height="16"/>
+                    <buttonCell key="cell" type="bevel" title="Cancel" bezelStyle="rounded" alignment="center" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="h4L-ZF-J7l">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name="BasisGrotesqueMonoPro-Regular"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="cancelButton:" target="-2" id="haM-Op-VEh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="2XB-XV-Bgm" firstAttribute="top" secondItem="zWK-dP-d30" secondAttribute="bottom" constant="25" id="1EB-vX-5nW"/>
+                <constraint firstItem="DYK-Z8-njU" firstAttribute="top" secondItem="2XB-XV-Bgm" secondAttribute="bottom" constant="2" id="2EF-uT-JmV"/>
+                <constraint firstItem="vkG-TD-LjG" firstAttribute="leading" secondItem="5Ge-K0-fbo" secondAttribute="leading" id="5ew-fQ-w01"/>
+                <constraint firstItem="s7G-wm-UEp" firstAttribute="centerY" secondItem="vkG-TD-LjG" secondAttribute="centerY" id="6ZS-Oa-cOf"/>
+                <constraint firstItem="PSV-pO-r4v" firstAttribute="centerY" secondItem="JC0-bD-dm6" secondAttribute="centerY" id="7sq-9V-2Pz"/>
+                <constraint firstItem="2XB-XV-Bgm" firstAttribute="leading" secondItem="zWK-dP-d30" secondAttribute="leading" id="8VV-AK-vM7"/>
+                <constraint firstItem="JC0-bD-dm6" firstAttribute="leading" secondItem="PSV-pO-r4v" secondAttribute="trailing" constant="15" id="GRE-rD-J8W"/>
+                <constraint firstItem="5Ge-K0-fbo" firstAttribute="leading" secondItem="DYK-Z8-njU" secondAttribute="leading" id="GX8-Rd-EwT"/>
+                <constraint firstItem="vkG-TD-LjG" firstAttribute="top" secondItem="5Ge-K0-fbo" secondAttribute="bottom" constant="2" id="R3D-K3-nz8"/>
+                <constraint firstItem="DYK-Z8-njU" firstAttribute="leading" secondItem="2XB-XV-Bgm" secondAttribute="leading" id="RE2-Mr-sZ8"/>
+                <constraint firstAttribute="trailing" secondItem="JC0-bD-dm6" secondAttribute="trailing" constant="17" id="dR4-ol-0Uu"/>
+                <constraint firstItem="zWK-dP-d30" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="34" id="hDu-05-J5v"/>
+                <constraint firstItem="5Ge-K0-fbo" firstAttribute="top" secondItem="DYK-Z8-njU" secondAttribute="bottom" constant="20" id="iZI-oc-Ahg"/>
+                <constraint firstItem="s7G-wm-UEp" firstAttribute="leading" secondItem="vkG-TD-LjG" secondAttribute="trailing" constant="10" id="kDp-dq-tVu"/>
+                <constraint firstAttribute="trailing" secondItem="zWK-dP-d30" secondAttribute="trailing" constant="20" id="l1k-eB-T3Z"/>
+                <constraint firstAttribute="bottom" secondItem="JC0-bD-dm6" secondAttribute="bottom" constant="20" symbolic="YES" id="nMz-xv-7Xn"/>
+                <constraint firstItem="zWK-dP-d30" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="28" id="vTp-9b-bZN"/>
+            </constraints>
+            <point key="canvasLocation" x="-97" y="90.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

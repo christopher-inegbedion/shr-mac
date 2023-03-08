@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RecentBlockTableCell" customModule="Shr" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="oVP-BN-Jn0" id="XaY-fm-wS5"/>
+                <outlet property="contentView" destination="c22-O7-iKe" id="ths-lq-D08"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="114" height="20"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oVP-BN-Jn0">
+                    <rect key="frame" x="-5" y="-7" width="106" height="32"/>
+                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kjN-Vd-17o">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="buttonAction:" target="-2" id="r9c-2c-P8T"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="oVP-BN-Jn0" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="4ZP-K4-jlJ"/>
+                <constraint firstItem="oVP-BN-Jn0" firstAttribute="height" secondItem="c22-O7-iKe" secondAttribute="height" id="LHt-im-dmg"/>
+                <constraint firstItem="oVP-BN-Jn0" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="2" id="OG2-0Q-Dqe"/>
+                <constraint firstAttribute="trailing" secondItem="oVP-BN-Jn0" secondAttribute="trailing" constant="20" id="RZj-RG-IhD"/>
+            </constraints>
+            <point key="canvasLocation" x="-172" y="22"/>
+        </customView>
+    </objects>
+</document>

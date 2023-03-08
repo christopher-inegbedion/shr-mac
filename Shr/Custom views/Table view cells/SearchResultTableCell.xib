@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SearchResultTableCell" customModule="Shr" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="c22-O7-iKe" id="gex-Fo-tgY"/>
+                <outlet property="iconImageView" destination="Grp-pU-ebH" id="hdT-Jy-eOX"/>
+                <outlet property="resultExtraLabel" destination="ehS-Ml-mmk" id="BXb-gw-cgq"/>
+                <outlet property="resultName" destination="XTT-sk-10j" id="mP3-G8-Rhq"/>
+                <outlet property="resultSubName" destination="f2r-GH-YwT" id="hGd-9r-uni"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="searchCell" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="48"/>
+            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Grp-pU-ebH">
+                    <rect key="frame" x="10" y="11" width="20" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="LEg-E0-JDp"/>
+                        <constraint firstAttribute="height" constant="20" id="yHr-mn-SOl"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="doc.fill" catalog="system" id="JfB-GD-xhj"/>
+                </imageView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="XTT-sk-10j">
+                    <rect key="frame" x="38" y="18" width="92" height="16"/>
+                    <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="tMW-ov-Y1Q">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="f2r-GH-YwT">
+                    <rect key="frame" x="38" y="5" width="74" height="13"/>
+                    <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="msn-m8-z2B">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-Ml-mmk">
+                    <rect key="frame" x="388" y="18" width="74" height="13"/>
+                    <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="QKy-vH-uec">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="f2r-GH-YwT" firstAttribute="leading" secondItem="XTT-sk-10j" secondAttribute="leading" id="27k-oR-SMF"/>
+                <constraint firstItem="ehS-Ml-mmk" firstAttribute="centerY" secondItem="Grp-pU-ebH" secondAttribute="centerY" id="FXh-tg-mQg"/>
+                <constraint firstItem="XTT-sk-10j" firstAttribute="top" secondItem="Grp-pU-ebH" secondAttribute="top" id="LOA-Wt-O0a"/>
+                <constraint firstAttribute="trailing" secondItem="ehS-Ml-mmk" secondAttribute="trailing" constant="20" id="Rlg-t2-LqN"/>
+                <constraint firstItem="Grp-pU-ebH" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="W0W-1X-ZlU"/>
+                <constraint firstItem="XTT-sk-10j" firstAttribute="leading" secondItem="Grp-pU-ebH" secondAttribute="trailing" constant="10" id="cp8-RU-Hhw"/>
+                <constraint firstItem="Grp-pU-ebH" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="eb5-vM-QBG"/>
+                <constraint firstItem="f2r-GH-YwT" firstAttribute="top" secondItem="XTT-sk-10j" secondAttribute="bottom" id="pW1-z1-0x8"/>
+            </constraints>
+            <point key="canvasLocation" x="14" y="4"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="doc.fill" catalog="system" width="15" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FileDownloadDialogView" customModule="Shr" customModuleProvider="target">
+            <connections>
+                <outlet property="notDownloadingLabel" destination="8fo-Uq-Uqj" id="2Hk-YF-qIf"/>
+                <outlet property="tableView" destination="eO5-TE-jKG" id="stN-94-vMJ"/>
+                <outlet property="view" destination="c22-O7-iKe" id="NNQ-Id-MMI"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="325"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2sL-K5-Pze">
+                    <rect key="frame" x="28" y="278" width="148" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="FILES DOWNLOADING" id="aWr-l4-4IG">
+                        <font key="font" size="14" name="BasisGrotesqueMonoPro-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="45" horizontalPageScroll="10" verticalLineScroll="45" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUT-30-kMQ">
+                    <rect key="frame" x="0.0" y="56" width="314" height="200"/>
+                    <clipView key="contentView" id="sJS-Zd-PxP">
+                        <rect key="frame" x="1" y="1" width="312" height="198"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView identifier="table" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="45" rowSizeStyle="automatic" headerView="gQJ-sK-bnT" viewBased="YES" id="eO5-TE-jKG">
+                                <rect key="frame" x="0.0" y="0.0" width="312" height="170"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <size key="intercellSpacing" width="17" height="0.0"/>
+                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <tableColumns>
+                                    <tableColumn identifier="nameColumn" width="300" minWidth="40" maxWidth="1000" id="VlL-Gg-Mqg">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Name">
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="reP-4h-kzi">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <prototypeCellViews>
+                                            <tableCellView identifier="test" id="oz2-Z4-6ST" customClass="UploadProgressNameCell" customModule="Shr" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="0.0" width="295" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </tableCellView>
+                                        </prototypeCellViews>
+                                    </tableColumn>
+                                </tableColumns>
+                            </tableView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="2XH-ib-FKk">
+                        <rect key="frame" x="1" y="180" width="312" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="5SN-Dc-Ypz">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <tableHeaderView key="headerView" wantsLayer="YES" id="gQJ-sK-bnT">
+                        <rect key="frame" x="0.0" y="0.0" width="312" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tableHeaderView>
+                </scrollView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8fo-Uq-Uqj">
+                    <rect key="frame" x="28" y="148" width="258" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="You are not downloading a file" id="UFe-Ob-ZPf">
+                        <font key="font" size="12" name="SpaceGrotesk-Light_Regular"/>
+                        <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2IU-RJ-djW">
+                    <rect key="frame" x="248" y="20" width="46" height="16"/>
+                    <buttonCell key="cell" type="bevel" title="Cancel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="0Kb-AB-5MK">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <color key="contentTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="dismiss:" target="-2" id="Jsy-YV-gf1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VUT-30-kMQ" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="5lB-WS-PZW"/>
+                <constraint firstItem="8fo-Uq-Uqj" firstAttribute="centerY" secondItem="VUT-30-kMQ" secondAttribute="centerY" id="B78-OG-uEJ"/>
+                <constraint firstAttribute="bottom" secondItem="2IU-RJ-djW" secondAttribute="bottom" constant="20" id="EZ0-mS-IGB"/>
+                <constraint firstAttribute="trailing" secondItem="VUT-30-kMQ" secondAttribute="trailing" id="J8p-jC-KWU"/>
+                <constraint firstItem="2IU-RJ-djW" firstAttribute="top" secondItem="VUT-30-kMQ" secondAttribute="bottom" constant="20" id="Rga-05-mab"/>
+                <constraint firstItem="2sL-K5-Pze" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="30" id="Vdu-PH-3KD"/>
+                <constraint firstItem="8fo-Uq-Uqj" firstAttribute="centerX" secondItem="VUT-30-kMQ" secondAttribute="centerX" id="Vg7-Yt-uSX"/>
+                <constraint firstAttribute="trailing" secondItem="8fo-Uq-Uqj" secondAttribute="trailing" constant="30" id="eQ2-3n-gFF"/>
+                <constraint firstItem="VUT-30-kMQ" firstAttribute="top" secondItem="2sL-K5-Pze" secondAttribute="bottom" constant="22" id="hBN-zU-yvS"/>
+                <constraint firstItem="2sL-K5-Pze" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="30" id="lIh-Jh-P7q"/>
+                <constraint firstItem="8fo-Uq-Uqj" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="30" id="tqQ-jt-8m3"/>
+                <constraint firstAttribute="trailing" secondItem="2IU-RJ-djW" secondAttribute="trailing" constant="20" id="uja-Hc-ssW"/>
+            </constraints>
+            <point key="canvasLocation" x="-74.5" y="94.5"/>
+        </customView>
+    </objects>
+</document>

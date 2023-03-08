@@ -10,11 +10,22 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    
-
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+//        WebsocketHandler.sendMessage(addr: "ws://localhost:\(Constants.WS_PORT)/command/isno", d: ["awsnode1"]) { response in
+//            if response.Message == "value" {
+//                let value = Common.decodeBase64ToObject(from: response.Value, to: IsUserOnlineModel.self, isFromDaemon: false)
+//                print(value?.online)
+//                return true
+//            } else {
+//                return false
+//            }
+//        } onError: { err in
+//            print("error happend")
+//            print(err)
+////            return true
+//        }
+
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

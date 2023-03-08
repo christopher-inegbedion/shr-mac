@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="WelcomePage" customModule="Shr" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomLabel" destination="A3a-uM-fmn" id="gMf-ub-GNl"/>
+                <outlet property="loadingIndicator" destination="La8-rC-SRV" id="Laz-YO-NI9"/>
+                <outlet property="logoImageView" destination="3re-hi-KbF" id="e6Y-h6-yq1"/>
+                <outlet property="setupAccountBtn" destination="irT-J3-nrF" id="e25-aa-UmK"/>
+                <outlet property="topLabel" destination="ApQ-e8-5Rr" id="y5Y-f6-Dcr"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView appearanceType="aqua" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="884" height="470"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ApQ-e8-5Rr">
+                    <rect key="frame" x="375" y="267" width="135" height="32"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to" id="4q1-KT-kQy">
+                        <font key="font" size="25" name="IM_FELL_English_SC"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25979266706682663" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box boxType="custom" cornerRadius="4" title="Box" transparent="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K12-BR-q9r">
+                    <rect key="frame" x="0.0" y="185" width="884" height="100"/>
+                    <view key="contentView" id="sjE-DH-iia">
+                        <rect key="frame" x="1" y="1" width="882" height="98"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A3a-uM-fmn">
+                                <rect key="frame" x="257" y="3" width="488" height="78"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="The File Platform" id="CIB-x0-24C">
+                                    <font key="font" size="60" name="SpaceGrotesk-Light_Bold"/>
+                                    <color key="textColor" red="0.0" green="0.45882352941176469" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3re-hi-KbF">
+                                <rect key="frame" x="189" y="12" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5Oi-H7-zAx"/>
+                                    <constraint firstAttribute="height" constant="60" id="xu3-VH-RN2"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="appicon" id="sia-W8-kli"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="A3a-uM-fmn" firstAttribute="centerX" secondItem="sjE-DH-iia" secondAttribute="centerX" constant="60" id="CsK-BF-GTR"/>
+                            <constraint firstItem="A3a-uM-fmn" firstAttribute="centerY" secondItem="3re-hi-KbF" secondAttribute="centerY" id="Gfu-ba-cM5"/>
+                            <constraint firstItem="3re-hi-KbF" firstAttribute="top" secondItem="sjE-DH-iia" secondAttribute="top" constant="26" id="TAG-QS-QMG"/>
+                            <constraint firstItem="A3a-uM-fmn" firstAttribute="top" secondItem="sjE-DH-iia" secondAttribute="top" constant="17" id="ceq-E5-5j6"/>
+                            <constraint firstItem="3re-hi-KbF" firstAttribute="trailing" secondItem="A3a-uM-fmn" secondAttribute="leading" constant="-10" id="hzJ-n8-CUC"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="pP0-Ac-JdH"/>
+                    </constraints>
+                </box>
+                <button focusRingType="none" verticalHuggingPriority="750" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irT-J3-nrF">
+                    <rect key="frame" x="357" y="53" width="171" height="32"/>
+                    <buttonCell key="cell" type="push" title="Setup your account" bezelStyle="rounded" image="arrow.right" catalog="system" imagePosition="trailing" alignment="left" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="9aC-8b-ewJ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="action:" target="-2" id="sev-yG-WnN"/>
+                    </connections>
+                </button>
+                <progressIndicator maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="La8-rC-SRV">
+                    <rect key="frame" x="364" y="59" width="157" height="22"/>
+                </progressIndicator>
+            </subviews>
+            <constraints>
+                <constraint firstItem="K12-BR-q9r" firstAttribute="width" secondItem="Hz6-mo-xeY" secondAttribute="width" id="AsK-eo-wUU"/>
+                <constraint firstItem="ApQ-e8-5Rr" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="EVG-bJ-Lws"/>
+                <constraint firstItem="La8-rC-SRV" firstAttribute="centerY" secondItem="irT-J3-nrF" secondAttribute="centerY" id="G6R-Nx-bDM"/>
+                <constraint firstAttribute="bottom" secondItem="irT-J3-nrF" secondAttribute="bottom" constant="60" id="VTG-oa-mIX"/>
+                <constraint firstItem="La8-rC-SRV" firstAttribute="centerX" secondItem="irT-J3-nrF" secondAttribute="centerX" id="Xdn-1e-AUY"/>
+                <constraint firstItem="K12-BR-q9r" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="ZAy-OT-mmT"/>
+                <constraint firstItem="La8-rC-SRV" firstAttribute="height" secondItem="irT-J3-nrF" secondAttribute="height" id="ZR4-8E-5gH"/>
+                <constraint firstItem="irT-J3-nrF" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="h3q-gs-S7T"/>
+                <constraint firstItem="K12-BR-q9r" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="nPX-gv-c9H"/>
+                <constraint firstItem="La8-rC-SRV" firstAttribute="width" secondItem="irT-J3-nrF" secondAttribute="width" id="pyx-Xs-0yC"/>
+                <constraint firstItem="K12-BR-q9r" firstAttribute="top" secondItem="ApQ-e8-5Rr" secondAttribute="bottom" constant="-18" id="rQO-4Z-fN9"/>
+            </constraints>
+            <point key="canvasLocation" x="-823" y="255"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="appicon" width="80" height="80"/>
+        <image name="arrow.right" catalog="system" width="16" height="12"/>
+    </resources>
+</document>

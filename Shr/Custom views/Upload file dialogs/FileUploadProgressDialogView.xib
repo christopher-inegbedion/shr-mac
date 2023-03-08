@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FileUploadProgressDialogView" customModule="Shr" customModuleProvider="target">
+            <connections>
+                <outlet property="noUploadLabel" destination="qCi-gd-5fH" id="2VT-Wa-f2l"/>
+                <outlet property="tableView" destination="Mal-j2-bJP" id="Mp8-C7-MGt"/>
+                <outlet property="view" destination="c22-O7-iKe" id="5hD-xU-v4D"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="305"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B5Z-S3-Gff">
+                    <rect key="frame" x="28" y="258" width="131" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="FILES UPLOADING" id="ZsT-6U-FOE">
+                        <font key="font" size="14" name="BasisGrotesqueMonoPro-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="45" horizontalPageScroll="10" verticalLineScroll="45" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7c-xR-bP9">
+                    <rect key="frame" x="0.0" y="56" width="312" height="180"/>
+                    <clipView key="contentView" id="um3-m2-GpY">
+                        <rect key="frame" x="1" y="1" width="310" height="178"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView identifier="table" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="45" rowSizeStyle="automatic" headerView="3JS-q5-U6H" viewBased="YES" id="Mal-j2-bJP">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="150"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <size key="intercellSpacing" width="17" height="0.0"/>
+                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <tableColumns>
+                                    <tableColumn identifier="nameColumn" width="298" minWidth="40" maxWidth="1000" id="qGp-V7-WpY">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Name">
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="qdA-hL-o55">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        <prototypeCellViews>
+                                            <tableCellView identifier="test" id="hkB-8K-sOE" customClass="UploadProgressNameCell" customModule="Shr" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="0.0" width="293" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </tableCellView>
+                                        </prototypeCellViews>
+                                    </tableColumn>
+                                </tableColumns>
+                            </tableView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="zrB-zt-tPf">
+                        <rect key="frame" x="1" y="118" width="238" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="0ib-Bb-nWe">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <tableHeaderView key="headerView" wantsLayer="YES" id="3JS-q5-U6H">
+                        <rect key="frame" x="0.0" y="0.0" width="310" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tableHeaderView>
+                </scrollView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qCi-gd-5fH">
+                    <rect key="frame" x="28" y="138" width="256" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="You are not uploading a file" id="m80-mw-YNz">
+                        <font key="font" size="12" name="SpaceGrotesk-Light_Regular"/>
+                        <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="62d-gR-1kl">
+                    <rect key="frame" x="246" y="20" width="46" height="16"/>
+                    <buttonCell key="cell" type="bevel" title="Cancel" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="o2V-3K-2P4">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <color key="contentTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="dismiss:" target="-2" id="NgD-XS-CuV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="y7c-xR-bP9" secondAttribute="trailing" id="84Z-EI-Gdp"/>
+                <constraint firstItem="B5Z-S3-Gff" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="30" id="A1B-q4-TzT"/>
+                <constraint firstItem="qCi-gd-5fH" firstAttribute="centerY" secondItem="y7c-xR-bP9" secondAttribute="centerY" id="BAF-EJ-dvw"/>
+                <constraint firstItem="62d-gR-1kl" firstAttribute="top" secondItem="y7c-xR-bP9" secondAttribute="bottom" constant="20" id="BUS-IC-42y"/>
+                <constraint firstItem="y7c-xR-bP9" firstAttribute="top" secondItem="B5Z-S3-Gff" secondAttribute="bottom" constant="22" id="CEX-dW-mOW"/>
+                <constraint firstItem="B5Z-S3-Gff" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="30" id="DwF-ih-QFU"/>
+                <constraint firstItem="qCi-gd-5fH" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="30" id="JgB-Rd-hba"/>
+                <constraint firstAttribute="trailing" secondItem="62d-gR-1kl" secondAttribute="trailing" constant="20" id="Omb-xB-8Lf"/>
+                <constraint firstItem="y7c-xR-bP9" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="Qfm-Fe-aF0"/>
+                <constraint firstAttribute="trailing" secondItem="qCi-gd-5fH" secondAttribute="trailing" constant="30" id="aUP-Cm-Q9R"/>
+                <constraint firstAttribute="bottom" secondItem="62d-gR-1kl" secondAttribute="bottom" constant="20" id="bFg-HI-rKi"/>
+            </constraints>
+            <point key="canvasLocation" x="-87.5" y="179"/>
+        </customView>
+    </objects>
+</document>

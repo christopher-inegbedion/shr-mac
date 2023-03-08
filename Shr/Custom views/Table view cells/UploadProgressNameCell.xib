@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="UploadProgressNameCell" customModule="Shr" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="nDH-pF-nDF" id="55S-gd-9Om"/>
+                <outlet property="contentView" destination="c22-O7-iKe" id="14X-No-0np"/>
+                <outlet property="fileNameLabel" destination="30f-1J-Ugd" id="60i-U5-itu"/>
+                <outlet property="iconImageView" destination="PxR-Cl-a1j" id="XVd-te-bGh"/>
+                <outlet property="progressMessageLabel" destination="MAA-Cc-hl2" id="GKA-g4-Zou"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="test" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="305" height="41"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PxR-Cl-a1j">
+                    <rect key="frame" x="0.0" y="18" width="20" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="0ob-Ei-mD9"/>
+                        <constraint firstAttribute="height" constant="20" id="YyZ-yV-Ugl"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="doc" catalog="system" id="U8b-5N-Npg"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="30f-1J-Ugd">
+                    <rect key="frame" x="28" y="25" width="259" height="16"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="giZ-1d-dJs">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="MAA-Cc-hl2">
+                    <rect key="frame" x="28" y="-18" width="224" height="39"/>
+                    <textFieldCell key="cell" selectable="YES" title="Multiline LabelMultiline LabelMultiline LabelMultiline LabelMultiline LabelMultiline LabelMultiline Label" id="7Qg-sb-W2q">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nDH-pF-nDF">
+                    <rect key="frame" x="270" y="13" width="15" height="15"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="xmark.circle" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="t1e-dG-wfl">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="closeAction:" target="-2" id="snf-b2-shS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="nDH-pF-nDF" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="EfC-uu-1Lj"/>
+                <constraint firstItem="PxR-Cl-a1j" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="FTH-ne-hcS"/>
+                <constraint firstItem="PxR-Cl-a1j" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="USv-Sq-foy"/>
+                <constraint firstItem="MAA-Cc-hl2" firstAttribute="top" secondItem="30f-1J-Ugd" secondAttribute="bottom" constant="4" id="ZLv-vi-5if"/>
+                <constraint firstAttribute="trailing" secondItem="30f-1J-Ugd" secondAttribute="trailing" constant="20" id="eSK-vx-DQL"/>
+                <constraint firstAttribute="trailing" secondItem="nDH-pF-nDF" secondAttribute="trailing" constant="20" id="lTJ-vZ-QjV"/>
+                <constraint firstItem="30f-1J-Ugd" firstAttribute="top" secondItem="PxR-Cl-a1j" secondAttribute="top" id="mS7-Ut-LmE"/>
+                <constraint firstItem="MAA-Cc-hl2" firstAttribute="leading" secondItem="30f-1J-Ugd" secondAttribute="leading" id="p3v-Du-w3e"/>
+                <constraint firstItem="30f-1J-Ugd" firstAttribute="leading" secondItem="PxR-Cl-a1j" secondAttribute="trailing" constant="10" id="sMi-ee-Ty5"/>
+                <constraint firstItem="nDH-pF-nDF" firstAttribute="leading" secondItem="MAA-Cc-hl2" secondAttribute="trailing" constant="20" id="yEi-lf-vra"/>
+            </constraints>
+            <point key="canvasLocation" x="-52.5" y="69.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="doc" catalog="system" width="15" height="16"/>
+        <image name="xmark.circle" catalog="system" width="15" height="15"/>
+    </resources>
+</document>
