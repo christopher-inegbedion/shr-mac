@@ -249,6 +249,11 @@ extension FileDownloadDialogView: NSTableViewDelegate, NSTableViewDataSource {
             if fileDownloading.isComplete {
                 cellView.progressMessageLabel.stringValue = "✓ Download Complete"
                 cellView.progressMessageLabel.textColor = .systemGreen
+                cellView.actionButton.isHidden = false
+                cellView.actionButtonAction = {
+                    let folderURL = URL(fileURLWithPath: "/Users/chrisineg/Downloads/shr")
+                    NSWorkspace.shared.open(folderURL)
+                }
             } else {
                 if !fileDownloading.isCurrentlyDownloading {
                     cellView.progressMessageLabel.stringValue = "Not downloading"

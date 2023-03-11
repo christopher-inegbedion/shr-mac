@@ -32,6 +32,8 @@ class HomePage: NSViewController {
     @IBOutlet weak var recentsSection: NSBox!
     @IBOutlet weak var recentBlocksTableView: NSTableView!
     
+    @IBOutlet weak var viewDevToolsButton: NSButton!
+    
     var searchHandler: SearchHandler!
     var searchTableController: SearchResultTableController!
     
@@ -43,20 +45,12 @@ class HomePage: NSViewController {
     var recentBlocksTableController: RecentBlocksTableController!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        showDevToolsIcon()
+        
         recentBlocksTableController = RecentBlocksTableController(allBlocks: self.allBlocks, cardCollectionView: self.cardCollectionsView)
         recentBlocksTableView.delegate = recentBlocksTableController
         recentBlocksTableView.dataSource = recentBlocksTableController
-        
-        // Get the vertical scroller of the table view
-//        recentBlocksTableView.enclosingScrollView?.horizontalScroller = OpaqueScroller()
-        let verticalScroller = recentBlocksTableView.enclosingScrollView?.horizontalScroller
-        
-        // Set the height of the vertical scroller
-        verticalScroller?.controlSize = .small
-        verticalScroller?.scrollerStyle = .overlay
-        verticalScroller?.knobStyle = .light
-        
-        verticalScroller?.frame.size.height = 20
         
         recentBlocksTableView.register(NSNib(nibNamed: "RecentBlockTableCell", bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier("RecentBlockTableCell"))
 
@@ -79,6 +73,14 @@ class HomePage: NSViewController {
         
         self.view.wantsLayer = true
         self.view.layer?.backgroundColor = .white
+    }
+    
+    func showDevToolsIcon() {
+        if ProcessInfo.processInfo.environment["SHOW_DEVTOOLS_ICON"] == "1" {
+            viewDevToolsButton.isHidden = false
+        } else {
+            viewDevToolsButton.isHidden = true
+        }
     }
     
     func listenForRecentBlockEvents() {
@@ -114,6 +116,9 @@ class HomePage: NSViewController {
     
     func setupRecentsTable() {
         let allBlocks = RecentBlocksHandler.shared.getRecentBlocks()
+        if allBlocks.count == 0 {
+            recentsSection.isHidden = true
+        }
         var i = 0
         
         for _ in allBlocks {
@@ -121,12 +126,21 @@ class HomePage: NSViewController {
             self.recentBlocksTableView.addTableColumn(NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: i.description)))
         }
         
+        let verticalScroller = recentBlocksTableView.enclosingScrollView?.horizontalScroller
+        
+        // Set the height of the vertical scroller
+        verticalScroller?.controlSize = .small
+        verticalScroller?.scrollerStyle = .overlay
+        verticalScroller?.knobStyle = .light
+        
+        verticalScroller?.frame.size.height = 20
+        
         displayRecentBlocks()
     }
     
     func displayRecentBlocks() {
-        let allBlocks = RecentBlocksHandler.shared.getRecentBlocks()
-        self.recentBlocksTableController.blocks = allBlocks
+        let recentBlocks = RecentBlocksHandler.shared.getRecentBlocks()
+        self.recentBlocksTableController.blocks = recentBlocks
         
         self.recentBlocksTableView.delegate = self.recentBlocksTableController
         self.recentBlocksTableView.dataSource = self.recentBlocksTableController
@@ -378,19 +392,17 @@ class HomePage: NSViewController {
     }
     
     func setupSearch() {
-        DispatchQueue.main.async {
-            DaemonHandler.getAllBlocks { [self] blocks in
-                guard let allBlocks = blocks else { return }
-                self.recentBlocksTableController.allBlocks = allBlocks
-                self.searchHandler = SearchHandler(possibleResultObjects: allBlocks)
-                
-                DispatchQueue.main.async { [self] in
-                    searchResultsContainer.isHidden = true
-                    searchResultsTableView.register(NSNib(nibNamed: "SearchResultTableCell", bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier("SearchResultTableCell"))
-                }
-            } errorCallback: { err in
-                print(err)
+        DaemonHandler.getAllBlocks { [self] blocks in
+            guard let allBlocks = blocks else { return }
+            self.recentBlocksTableController.allBlocks = allBlocks
+            self.searchHandler = SearchHandler(possibleResultObjects: allBlocks)
+            
+            DispatchQueue.main.async { [self] in
+                searchResultsContainer.isHidden = true
+                searchResultsTableView.register(NSNib(nibNamed: "SearchResultTableCell", bundle: nil), forIdentifier: NSUserInterfaceItemIdentifier("SearchResultTableCell"))
             }
+        } errorCallback: { err in
+            print(err)
         }
         
     }
@@ -453,6 +465,11 @@ class HomePage: NSViewController {
     
     @IBAction func showUploadDialog(_ sender: NSButton) {
         self.showUploadsDialog()
+    }
+    
+    @IBAction func showDevToolsDialog(_ sender: NSButton) {
+        let dialog = DevToolsDialog(nibName: "DevToolsDialog", bundle: nil)
+        self.presentAsSheet(dialog)
     }
     
     override func viewDidLayout() {

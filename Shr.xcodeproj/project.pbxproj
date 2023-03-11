@@ -43,6 +43,8 @@
 		F6593EE829B8CBF80035D87A /* RecentBlocksHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6593EE729B8CBF80035D87A /* RecentBlocksHandler.swift */; };
 		F6593EEA29B92DC60035D87A /* RecentBlockTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6593EE929B92DC60035D87A /* RecentBlockTableCell.xib */; };
 		F6593EEC29B92DDD0035D87A /* RecentBlockTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6593EEB29B92DDD0035D87A /* RecentBlockTableCell.swift */; };
+		F6593EEF29BB426B0035D87A /* DevToolsDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6593EEE29BB426B0035D87A /* DevToolsDialog.swift */; };
+		F6593EF129BB42840035D87A /* DevToolsDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6593EF029BB42840035D87A /* DevToolsDialog.xib */; };
 		F6B3FE8129A4E654001BBE58 /* FileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B3FE8029A4E654001BBE58 /* FileCardView.swift */; };
 		F6B3FE8329A4E686001BBE58 /* FileCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B3FE8229A4E686001BBE58 /* FileCardView.xib */; };
 		F6B3FE8629A6C62F001BBE58 /* UploadFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B3FE8429A6C62F001BBE58 /* UploadFileView.swift */; };
@@ -61,6 +63,8 @@
 		F6B3FEB529A953BC001BBE58 /* ViewAllCardsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B3FEB429A953BC001BBE58 /* ViewAllCardsView.xib */; };
 		F6B6AC2529AAADF800445060 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B6AC2429AAADF800445060 /* User.swift */; };
 		F6B6AC2729AC17FF00445060 /* IsUserOnlineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B6AC2629AC17FF00445060 /* IsUserOnlineModel.swift */; };
+		F6E73AFE29BCD076000B7B93 /* DevToolItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E73AFD29BCD076000B7B93 /* DevToolItem.swift */; };
+		F6E73B0029BCE39A000B7B93 /* AppleScripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E73AFF29BCE39A000B7B93 /* AppleScripts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +124,8 @@
 		F6593EE729B8CBF80035D87A /* RecentBlocksHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBlocksHandler.swift; sourceTree = "<group>"; };
 		F6593EE929B92DC60035D87A /* RecentBlockTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentBlockTableCell.xib; sourceTree = "<group>"; };
 		F6593EEB29B92DDD0035D87A /* RecentBlockTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBlockTableCell.swift; sourceTree = "<group>"; };
+		F6593EEE29BB426B0035D87A /* DevToolsDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevToolsDialog.swift; sourceTree = "<group>"; };
+		F6593EF029BB42840035D87A /* DevToolsDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevToolsDialog.xib; sourceTree = "<group>"; };
 		F6B3FE8029A4E654001BBE58 /* FileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCardView.swift; sourceTree = "<group>"; };
 		F6B3FE8229A4E686001BBE58 /* FileCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileCardView.xib; sourceTree = "<group>"; };
 		F6B3FE8429A6C62F001BBE58 /* UploadFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileView.swift; sourceTree = "<group>"; };
@@ -136,6 +142,10 @@
 		F6B3FEB429A953BC001BBE58 /* ViewAllCardsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewAllCardsView.xib; sourceTree = "<group>"; };
 		F6B6AC2429AAADF800445060 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F6B6AC2629AC17FF00445060 /* IsUserOnlineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsUserOnlineModel.swift; sourceTree = "<group>"; };
+		F6E73AFB29BC1066000B7B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F6E73AFC29BC123F000B7B93 /* build_uninstall_install_daemon.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build_uninstall_install_daemon.sh; sourceTree = "<group>"; };
+		F6E73AFD29BCD076000B7B93 /* DevToolItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevToolItem.swift; sourceTree = "<group>"; };
+		F6E73AFF29BCE39A000B7B93 /* AppleScripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScripts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +218,7 @@
 		F62A43EE299AD5340051504B /* Shr */ = {
 			isa = PBXGroup;
 			children = (
+				F6E73AFB29BC1066000B7B93 /* Info.plist */,
 				F6059D0129AD78DD0010C94D /* Daemon */,
 				F6B3FE9A29A82514001BBE58 /* Models */,
 				F6B3FE8E29A78B6A001BBE58 /* Common */,
@@ -243,6 +254,7 @@
 		F6541F1E299C249200322A68 /* Custom views */ = {
 			isa = PBXGroup;
 			children = (
+				F6593EED29BB423B0035D87A /* Devtools dialog */,
 				F6059D0429AF6FE50010C94D /* Download file dialogs */,
 				F6B6AC2829ACE7FD00445060 /* Upload file dialogs */,
 				F6B3FEB629A96CDA001BBE58 /* Table view cells */,
@@ -257,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				F6541F30299EC4B100322A68 /* shr-intro.mp3 */,
+				F6E73AFC29BC123F000B7B93 /* build_uninstall_install_daemon.sh */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -318,6 +331,17 @@
 				F6B3FEB429A953BC001BBE58 /* ViewAllCardsView.xib */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		F6593EED29BB423B0035D87A /* Devtools dialog */ = {
+			isa = PBXGroup;
+			children = (
+				F6593EEE29BB426B0035D87A /* DevToolsDialog.swift */,
+				F6593EF029BB42840035D87A /* DevToolsDialog.xib */,
+				F6E73AFD29BCD076000B7B93 /* DevToolItem.swift */,
+				F6E73AFF29BCE39A000B7B93 /* AppleScripts.swift */,
+			);
+			path = "Devtools dialog";
 			sourceTree = "<group>";
 		};
 		F6B3FE8829A780A6001BBE58 /* Websocket */ = {
@@ -507,6 +531,7 @@
 				F6059D0829AF702B0010C94D /* FileDownloadDialogView.xib in Resources */,
 				F6059CF829ACE86E0010C94D /* UploadFileView.xib in Resources */,
 				F6593EEA29B92DC60035D87A /* RecentBlockTableCell.xib in Resources */,
+				F6593EF129BB42840035D87A /* DevToolsDialog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +557,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B3FE9E29A83135001BBE58 /* Common.swift in Sources */,
+				F6593EEF29BB426B0035D87A /* DevToolsDialog.swift in Sources */,
+				F6E73B0029BCE39A000B7B93 /* AppleScripts.swift in Sources */,
 				F62A43F2299AD5340051504B /* ViewController.swift in Sources */,
 				F6059CFE29AD05860010C94D /* UploadProgressNameCell.swift in Sources */,
 				F6541F39299ECB2300322A68 /* HomePage.swift in Sources */,
@@ -558,6 +585,7 @@
 				F6593EE129B3CA790035D87A /* SearchResults.swift in Sources */,
 				F6B3FEA029A8C735001BBE58 /* Account.swift in Sources */,
 				F62A4424299B902B0051504B /* WelcomePage.swift in Sources */,
+				F6E73AFE29BCD076000B7B93 /* DevToolItem.swift in Sources */,
 				F62A43F0299AD5340051504B /* AppDelegate.swift in Sources */,
 				F6541F4B29A0F32600322A68 /* CardCollectionView.swift in Sources */,
 				F6B3FEB329A953AC001BBE58 /* ViewAllCardsView.swift in Sources */,
@@ -736,6 +764,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shr/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -762,6 +791,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shr/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;

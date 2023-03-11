@@ -26,6 +26,7 @@
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
                 <outlet property="viewAllDownloadsButton" destination="Yto-Xx-U7v" id="6gM-pH-x0A"/>
                 <outlet property="viewAllUploadsButton" destination="evV-VW-tMB" id="ceM-by-4P8"/>
+                <outlet property="viewDevToolsButton" destination="iGu-cB-Muo" id="5Yu-Xc-bC5"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -253,6 +254,16 @@
                         <action selector="uploadAction:" target="-2" id="T6w-QG-K9h"/>
                     </connections>
                 </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iGu-cB-Muo">
+                    <rect key="frame" x="197" y="309" width="92" height="32"/>
+                    <buttonCell key="cell" type="push" title="Dev tools" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tXR-iu-5F3">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showDevToolsDialog:" target="-2" id="SpW-pz-PYf"/>
+                    </connections>
+                </button>
                 <searchField wantsLayer="YES" focusRingType="none" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4O-Rc-OGU">
                     <rect key="frame" x="204" y="263" width="700" height="40"/>
                     <constraints>
@@ -475,8 +486,10 @@
                 <constraint firstItem="1qG-hI-APZ" firstAttribute="centerX" secondItem="g4O-Rc-OGU" secondAttribute="centerX" id="Gk3-hO-1HI"/>
                 <constraint firstItem="EgI-WB-1IY" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Hdl-1G-0Ed"/>
                 <constraint firstItem="g4O-Rc-OGU" firstAttribute="top" secondItem="cJ0-2G-BGN" secondAttribute="bottom" constant="10" id="LDe-WL-yCl"/>
+                <constraint firstItem="iGu-cB-Muo" firstAttribute="centerY" secondItem="cJ0-2G-BGN" secondAttribute="centerY" id="PEe-2O-KVA"/>
                 <constraint firstItem="1qG-hI-APZ" firstAttribute="width" secondItem="g4O-Rc-OGU" secondAttribute="width" id="PYZ-sk-ZU9"/>
                 <constraint firstItem="cJ0-2G-BGN" firstAttribute="trailing" secondItem="g4O-Rc-OGU" secondAttribute="trailing" id="Spa-BR-nu7"/>
+                <constraint firstItem="iGu-cB-Muo" firstAttribute="leading" secondItem="g4O-Rc-OGU" secondAttribute="leading" id="SzX-yi-dI2"/>
                 <constraint firstItem="g4O-Rc-OGU" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Tbx-0k-ucg"/>
                 <constraint firstAttribute="bottom" secondItem="Tmn-Ga-BLH" secondAttribute="bottom" constant="20" id="VYh-nh-899"/>
                 <constraint firstItem="g4O-Rc-OGU" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Yju-iq-ga5"/>

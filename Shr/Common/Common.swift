@@ -12,7 +12,7 @@ class Common {
     private init() {}
     
     static let shared = Common()
-    var lock = os_unfair_lock()
+    
     /// Convert a dictionary to an object
     static func convertDictionaryToObject<T>(from a: [String:Any], to object: T.Type) -> (T?, Error?) where T : Decodable {
         let decoder = JSONDecoder()
